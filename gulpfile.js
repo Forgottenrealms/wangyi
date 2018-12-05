@@ -20,9 +20,9 @@ gulp.task("js", ()=>{
 
 // 编译*.scss文件
 gulp.task("sass", ()=>{
-	gulp.src("src/js/**/*.scss")
-		.pipe(sass({outputStyle: "compressed"}))
-		.pipe(gulp.dest("dist/scss"))
+	gulp.src("src/sass/**/*.scss")
+		.pipe(sass({outputStyle: "expanded"}))
+		.pipe(gulp.dest("dist/css"))
 		.pipe(connect.reload());
 });
 
@@ -54,7 +54,7 @@ gulp.task("copy", ["copy-images", "copy-lib", "copy-css"]);
 // 启动 webserver
 gulp.task("server", function(){
 	connect.server({
-		root: "src",
+		root: "dist",
 		port: 8080,
 		livereload: true
 	});

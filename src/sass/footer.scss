@@ -1,0 +1,203 @@
+// 脚部样式文件
+.footer {
+    width: 100%;
+    height: 502px;
+    border-top: 1px solid #ccc;
+
+    .footer-top {
+        width: 100%;
+        height: 300px;
+        padding-top: 60px;
+        padding-bottom: 34px;
+        background: #fff;
+
+        .footer-top-wrap {
+            width: 1190px;
+            height: 100%;
+            margin: 0 auto;
+
+            .left {
+                float: left;
+                width: 396px;
+                height: 100%;
+                text-align: center;
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                a {
+                    display: inline-block;
+                    width: 80px;
+                    height: 100px;
+                    margin: 15px;
+                    border: 1px solid #e8e8e8;
+                    font-size: 14px;
+                    text-decoration: none;
+                    color: #666666;
+
+                    &:hover {
+                        color: #b4a078;
+                    }
+
+                    i {
+                        font-size: 22px;
+                        margin-top: 20px;
+                        margin-bottom: 12px;
+                    }
+                }
+            }
+            .middle {
+                float: left;
+                width: 396px;
+                height: 100%;
+                border-left: 1px solid #e9e9e9;
+                border-right: 1px solid #e9e9e9;
+                text-align: center;
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                p {
+                    text-align: left;
+                    margin-top: 30px;
+                    margin-left: 40px;
+                    font-size: 14px;
+                }
+
+                .attention {
+                    text-align: left;
+                    margin-top: 30px;
+                    margin-left: 40px;
+
+                    a {
+                        text-decoration: none;
+                        margin: 5px;
+
+                        i {
+                            font-size: 32px;
+                        }
+
+                        &:first-child {
+                            color: #0fab83;
+                        }
+                        &:nth-child(2) {
+                            color: #4bb341;
+                        }
+                        &:last-child {
+                            color: #e42f36;
+                        }
+                    }
+                }
+            }
+            .right {
+                float: left;
+                width: 396px;
+                height: 100%;
+                text-align: center;
+
+                h4 {
+                    font-size: 16px;
+                }
+
+                img {
+                    margin-top: 20px;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    color: #b4a084;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    .footer-bottom {
+        width: 100%;
+        height: 202px;
+        background: #414141;
+
+        .wrap {
+            width: 1190px;
+            height: 204px;
+            margin: 0 auto;
+
+            .up {
+                width: 100%;
+                height: 116px;
+                border-bottom: 1px solid #4f4f4f;
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+
+                p {
+                    font-size: 20px;
+                    height: 57px;
+                    line-height: 57px;
+                    color: #fff;
+                    padding-left: 70px;
+
+                    &:first-child {
+                        background: url("/images/up1.png") no-repeat left center;
+                    }
+                    &:nth-child(2) {
+                        background: url("/images/up2.png") no-repeat left center;
+                    }
+                    &:last-child {
+                        background: url("/images/up3.png") no-repeat left center;
+                    }
+                }
+            }
+
+            .down {
+                height: 86px;
+                width: 100%;
+                overflow: hidden;
+                position: relative;
+
+                .list {
+                    width: 100%;
+                    margin-top: 30px;
+                    text-align: center;
+
+                    a {
+                        font-size: 12px;
+                        text-decoration: none;
+                        color: #999999;
+                    }
+                    b {
+                        font-size: 14px;
+                        margin-left: 14px;
+                        margin-right: 14px;
+                        color: #999999;
+                    }
+                }
+
+                p {
+                    text-align: center;
+                    font-size: 13px;
+                    color: #999999; 
+
+                    a {
+                        color: #999999; 
+                        text-decoration: none;
+                    }
+                }
+
+                .police {
+                    display: block;
+                    position: absolute;
+                    right: 100px;
+                    bottom: 20px;
+
+                    img {
+                        width: 32px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

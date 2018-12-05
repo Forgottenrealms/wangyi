@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+a {
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+    // 轮播图
+    .slider {
+        width: 100%;
+        height: 420px;
+        position: relative;
+        overflow: hidden;
+
+        .slider-list {
+            li {
+                position: absolute;
+                display: none;
+                a {
+                    img {
+                        width: 100%;
+                        height: 420px;
+                    }
+                }
+            }
+        }
+    }
+    // 精选会场
+    .choose {
+        width: 100%;
+        height: 560px;
+        background: #fdecda;
+        // overflow: hidden;
+
+        .wrap {
+            width: 1190px;
+            height: 560px;
+            margin: 0 auto;
+
+            .choose-top {
+                width: 100%;
+                height: 128px;
+                // line-height: 128px;
+                text-align: center;
+                overflow: hidden;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                span {
+                    display: inline-block;
+                    height: 2px;
+                    width: 300px;
+                    border-top: 2px solid #aba39a;
+                }
+
+                h2 {
+                    font-size: 34px;
+
+                    i {
+                        font-size: 34px;
+                        font-style: normal;
+                        font-weight: 100;
+                        margin-left: 15px;
+                        color: #333333;
+                    }
+                }
+            }
+
+            .choose-bottom {
+                width: 100%;
+                height: 430px;
+                background: gold;
+
+                .choose-b-up {
+                    width: 100%;
+                    height: 210px;
+                    background: yellow;
+
+                    a {
+                        display: block;
+                        float: left;
+                    }
+                }
+            }
+        }
+    }
+}
