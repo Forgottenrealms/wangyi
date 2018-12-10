@@ -1,0 +1,354 @@
+// 边框颜色
+$bd : #b4a078;
+// 购物车页面样式
+.main {
+    width: 1090px;
+    margin: 0 auto;
+    overflow: hidden;
+    // 优惠券
+    .m-ticket {
+        width: 1090px;
+        height: 40px;
+        border: 1px solid $bd;
+        margin-top: 8px;
+        line-height: 40px;
+        padding-left: 56px;
+        background: url("/images/ticket.png") no-repeat 10px center;
+        
+        #btn-ticket {
+            float: right;
+            width: 130px;
+            height: 38px;
+            border: 0;
+            font-size: 12px;
+            color: #fff;
+            background: #e36844;
+        }
+    }
+    // 购物车
+    .m-cart {
+        width: 100%;
+        margin-top: 8px;
+        margin-bottom: 40px;
+        // 全选框
+        .check-all {
+            width: 100%;
+            height: 44px;
+            border: 1px solid $bd;
+            line-height: 44px;
+            font-size: 12px;
+            color: #000;
+            padding-left: 20px;
+            background: #f5f5f5;
+
+            .check {
+                width: 16px;
+                height: 16px;
+                border: 1px solid $bd;
+                margin: 0;
+                font-size: 12px;
+                vertical-align: middle;
+            }
+            span {
+                &:first-of-type {
+                    margin-left: 10px;
+                }
+                &:last-of-type {
+                    margin-left: 60px;
+                }
+            }
+            b {
+                font-weight: normal;
+                margin-left: 80px;
+            }
+            i {
+                font-style: normal;
+                margin-left: 320px;
+            }
+            em {
+                font-style: normal;
+                margin-left: 150px;
+            }
+            strong {
+                font-weight: normal;
+                margin-left: 160px;
+            }
+        }
+        //购物车为空时
+        .empty-cart {
+            width: 100%;
+            height: 596px;
+            border: 1px solid $bd;
+            background: url("/images/empty.png") no-repeat center 120px;
+
+            span {
+                float: left;
+                width: 100px;
+                height: 40px;
+                border-radius: 3px;
+                margin-top: 340px;
+                text-align: center;
+                line-height: 40px;
+                font-size: 16px;
+                cursor: pointer;
+
+                &:first-child {
+                    background: #b4a078;
+                    color: #fff;
+                    margin-left: 430px;
+                    
+                    &:hover {
+                        background: #d0c4ac;
+                    }
+                }
+                &:last-child {
+                    background: #f5f3ef;
+                    border: 1px solid #b4a078;
+                    color: #b4a078;
+                    margin-left: 15px;
+
+                    &:hover {
+                        background: #fff;
+                    }
+                }
+            }
+        }
+        // 商品
+        .products {
+            width: 100%;
+            border: 1px solid $bd;
+            margin-top: 8px;
+
+            .single-product {
+                height: 140px;
+                width: 100%;
+                font-size: 14px;
+                border-bottom: 1px dashed $bd;
+
+                &:last-of-type {
+                    border-bottom: 0;
+                }
+                //选择框
+                .choice-box {
+                    float: left;
+                    height: 80px;
+                    line-height: 80px;
+                    margin-top: 30px;
+                    margin-right: 20px;
+
+                    input {
+                        width: 16px;
+                        height: 16px;
+                        border: 1px solid $bd;
+                        margin: 0;
+                        margin-left: 20px;
+                        font-size: 12px;
+                        vertical-align: middle;
+                        background: #fff; 
+                    }
+                }
+                //商品图
+                .product-img {
+                    float: left;
+                    margin-top: 20px;
+
+                    a {
+                        display: inline-block;
+                        width: 100px;
+                        height: 100px;
+                        background: #f4f4f4;
+                        border: 1px solid $bd;
+
+                        img {
+                            width: 98px;
+                            height: 98px;
+                            float: left;
+                        }
+                    }
+                }
+                //商品信息
+                .product-info {
+                    float: left;
+                    width: 140px;
+                    margin-top: 30px;
+                    margin-left: 18px;
+
+                    select {
+                        border: 0;
+                        color: #999999;
+                    }
+                }
+                //单价
+                .product-price {
+                    float: left;
+                    width: 70px;
+                    margin-top: 30px;
+                    margin-left: 200px;
+                }
+                //数量
+                .product-number {
+                    float: left;
+                    margin-top: 30px;
+                    width: 106px;
+                    height: 25px;
+                    margin-left: 80px;
+
+                    span {
+                        float: left;
+                        width: 25px;
+                        height: 25px;
+                        text-align: center;
+                        line-height: 25px;
+                        color: #999999;
+                        font-weight: bold;
+                        font-size: 16px;
+                        border: 1px solid $bd;
+                    }
+                    input {
+                        float: left;
+                        height: 25px;
+                        width: 56px;
+                        border: 0;
+                        outline: none;
+                        text-align: center;
+                        line-height: 25px;
+                        border-top: 1px solid $bd;
+                        border-bottom: 1px solid $bd;
+                    }
+                }
+                //小计
+                .product-calc {
+                    float: left;
+                    width: 60px;
+                    margin-top: 30px;
+                    margin-left: 100px;
+                    color: #d72850;
+                }
+                //操作
+                .product-oprate {
+                    float: left;
+                    margin-top: 30px;
+                    margin-left: 50px;
+
+                    a {
+                        display: block;
+                        color: #000;
+
+                        &:hover {
+                            color: #b4a078;
+                        }
+                    }
+                }
+            }
+        }
+        // 下单
+        .pay {
+            width: 100%;
+            height: 70px;
+            border: 1px solid $bd;
+            line-height: 70px;
+            font-size: 14px;
+            color: #333333;
+            padding-left: 20px;
+            background: #f5f5f5;
+            margin-top: 10px;
+
+            .check {
+                float: left;
+                width: 16px;
+                height: 16px;
+                border: 1px solid $bd;
+                margin: 0;
+                font-size: 12px;
+                margin-top: 27px;
+            }
+            .pay-check {
+                float: left;
+                margin-left: 16px;
+            }
+            .pay-delete {
+                float: left;
+                margin-left: 36px;
+                a {
+                    color: #000;
+                    text-decoration: none;
+                    &:hover {
+                        color: #b4a078;
+                    }
+                }
+            }
+            .pay-empty {
+                float: left;
+                margin-left: 36px;
+                a {
+                    color: #000;
+                    text-decoration: none;
+                    &:hover {
+                        color: #b4a078;
+                    }
+                }
+            }
+            .pay-clac {
+                float: left;
+                margin-left: 170px;
+                margin-top: 12px;
+                width: 200px;
+                height: 50px;
+                padding-right: 30px;
+                border-right: 1px solid $bd;
+                p {
+                    color: #999999;
+                    b {
+                        font-weight: normal;
+                        float: right;
+                    }
+                    &:first-child {
+                        line-height: 25px;
+                    }
+                    &:last-child {
+                        line-height: 0px;
+                    }
+                }
+            }
+            .pay-count {
+                float: left;
+                width: 200px;
+                margin-top: 16px;
+                margin-left: 40px;
+
+                p {
+                    line-height: 14px;
+
+                    b {
+                        color: #be4141;
+                        font-size: 20px;
+                        font-weight: 600;
+                        float: right;
+                    }
+                }
+                a {
+                    display: block;
+                    text-align: right;
+                    line-height: 14px;
+                    color: #dc4a2d;
+                }
+            }
+            .pay-alipay {
+                float: right;
+                width: 140px;
+                height: 70px;
+                background: #b4a078;
+                text-align: center;
+                line-height: 70px;
+                color: #fff;
+                border: 0;
+                font-size: 18px;
+                font-weight: 500;
+
+                &:hover {
+                    background: #ccbfa5;
+                }
+            }
+        }
+    }
+}

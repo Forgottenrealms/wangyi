@@ -1,3 +1,7 @@
+* {
+    margin: 0;
+    padding: 0;
+}
 /* 头部样式 */
 .header {
     width: 100%;
@@ -137,9 +141,21 @@
                         margin-top: 74px;
                     }
 
-                    #search {
+                    #btn-search {
                         background: none;
                         border: 0;
+                        outline: none;
+
+                        i {
+                            color: #b4a078;
+                            font-size: 18px;
+                        }
+                    }
+                    #btn-cart {
+                        background: none;
+                        border: 0;
+                        outline: none;
+                        margin-left: 8px;
 
                         i {
                             color: #b4a078;
@@ -152,8 +168,9 @@
                         width: 250px;
                         background: white;
                         border: 1px solid #ccc;
-                        border-top: 0;
-                        margin-left: 55px;
+                        border-top: none;
+                        margin-left: 39px;
+                        z-index: 1;
                     }
                 }
             }

@@ -20,8 +20,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<div class="main">
 		<div class="wrap">
 			<div class="m-header">
-				<a href="#">首页</a><span>></span>
-				<a href="#"><b>品牌制造商</b></a><span>></span>
+				<a href="/html/index.html">首页</a><span>></span>
+				<a href="javascript:void(0)"><b>品牌制造商</b></a><span>></span>
 				<i>CK制造商</i>
 			</div>
 			<div class="m-brand">
@@ -59,10 +59,11 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script type="text/html" id="brand-template">
 		{{each brand products}}
 			<div class="m-l-product">
+				<div style="display: none;" class="id">{{products.id}}</div>
 				<div class="m-l-p-up">
-					<a href="#"><img src="{{products.img}}"/></a>	
+					<a href="/html/html/detail.html?img={{products.img}}&id={{products.id}}&title={{products.title}}&price={{products.price}}&desc={{products.desc}}"><img src="{{products.img}}"/></a>	
 				</div>
-				<div class="title"><a href="#">{{products.title}}</a></div>
+				<div class="title"><a href="/html/html/detail.html">{{products.title}}</a></div>
 				<div class="price">￥{{products.price}}</div>
 				<span></span>
 				<div class="desc">{{products.desc}}</div>
