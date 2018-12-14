@@ -9,8 +9,12 @@
 
             <div class="header-right">
                 <div class="header-login">
-                    <a href="#" class="login">登录</a>
-                    <a href="#" class="register">注册</a>
+                    <a href="/html/html/loginAndRegister.html" class="login">登录</a>
+                    <a href="/html/html/loginAndRegister.html" class="register">注册</a>
+                </div>
+                <!-- 显示登录用户 -->
+                <div class="userShow hidden">
+                    <a href="#">欢迎：<span></span></a> <a href="javascript:void(0);">退出</a>
                 </div>
                 <ul>
                     <li><a href="#">我的订单</a></li>
@@ -47,12 +51,16 @@
                     </button>
                     <button id="btn-cart">
                         <i class="glyphicon glyphicon-shopping-cart"></i>
+                        <span>0</span>
                     </button>
                     <div class="suggest"></div>
                     <!-- <button id="cart"></button> -->
                 </div>
             </div>
-            <div class="bottom-list">
+        </div>
+
+        <div class="bottom-list">
+            <div class="wrap">
                 <ul class="left">
                     <li><a href="#">首页</a></li>
                     <li><a href="#">居家</a></li>
@@ -72,5 +80,6 @@
                 </ul>
             </div>
         </div>
+        
     </div>
 </div>

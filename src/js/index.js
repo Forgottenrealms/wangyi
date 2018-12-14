@@ -1,30 +1,5 @@
 require(["config"], function() {
-    require(["jquery", "load"], function($) {
-        /** 面向过程轮播图
-        let 
-            currIndex = 1,
-            nextIndex = 2;
-        
-            function move() {
-                $(`.slider-list li:nth-child(${currIndex})`).fadeOut(1000);
-                $(`.slider-list li:nth-child(${nextIndex})`).fadeIn(1000);
-
-                currIndex = nextIndex;
-                nextIndex++;
-                if(nextIndex > $(".slider-list li").length) {
-                    nextIndex = 1;
-                }
-            }
-
-            let timer = setInterval(move, 3000);
-
-            $(".slider").on("mouseenter",()=>{
-                clearInterval(timer);
-            })
-            $(".slider").on("mouseleave",()=>{
-                timer = setInterval(move, 3000);
-            }) */
-
+    require(["jquery", "load", "cookie"], function($) {
         //面向对象轮播图
         const Slider = {
             lis: $("li", $(".slider-list")),    //所有轮播图片
@@ -81,31 +56,5 @@ require(["config"], function() {
 
         Slider.addListener();
         Slider.autoPlay();
-
-        /*//点击跳转到列表页面传入数据：品牌类别和商家名字
-        function Brands() {
-            this.addListener();
-        };
-
-        $.extend(Brands.prototype, {
-            addListener() {
-                $("div.brand-down .b-d-left a").on("click", this.brandHandle);
-                $("div.brand-down .b-d-right a").on("click", this.brandHandle);
-            },
-            //处理品牌数据
-            brandHandle(event) {
-                var src = $(event.target);
-                const 
-                    brand = src.parents("div.brand").find(".brand-up-header p a").text(),   //品牌
-                    merchant = src.children("h4").text();   //品牌商家的名字
-                console.log(brand, merchant)
-                $.getJSON(`http://localhost:8080/html/html/list.html?brand=${brand}&merchant=${merchant}`);
-            }
-        });
-
-        new Brands();
-
-        // console.log($("div.brand .b-d-left a").parents("div.brand").find(".brand-up-header p a").text());
-        // console.log($("div.brand .b-d-left a").children("h4").text())*/
     });
 });

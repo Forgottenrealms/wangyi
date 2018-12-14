@@ -120,6 +120,17 @@
                 .m-l-p-up {
                     width: 244px;
                     height: 244px;
+
+                    a {
+                        display: block;
+                        width: 244px;
+                        height: 244px;
+
+                        img {
+                            width: 244px;
+                            height: 244px;
+                        }
+                    }
                 }
                 .title {
                     text-align: center;

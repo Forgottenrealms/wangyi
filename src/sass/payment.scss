@@ -1,0 +1,396 @@
+// 结算页面样式
+* {
+    margin: 0;
+    padding: 0;
+}
+// 主色
+$bd : #b4a078;
+
+.main {
+    width: 1090px;
+    margin: 0 auto;
+    overflow: hidden;
+    // 收货信息
+    .receive-info {
+        width: 100%;
+        height: 310px;
+        border: 1px solid #e8e8e8;
+        margin-top: 50px;
+
+        .receive-header {
+            width: 100%;
+            height: 44px;
+            line-height: 44px;
+            background: #f5f5f5;
+            border-bottom: 1px solid #e8e8e8;
+            font-size: 14px;
+            color: #999999;
+            padding-left: 20px;
+        }
+        .information {
+            width: 100%;
+            height: 266px;
+
+            .wrap {
+                width: 1010px;
+                height: 190px;
+                margin-top: 50px;
+                margin-left: 40px;
+
+                .left {
+                    width: 650px;
+                    height: 100%;
+                    float: left;
+                    border-right: 1px dashed #ececec;
+                    font-size: 14px;
+                    color: #333333;
+
+                    .area {
+                        select {
+                            border: 1px solid #dddddd;
+                            width: 168px;
+                            height: 26px;
+                        }
+                    }
+                    .address {
+                        width: 610px;
+                        height: 70px;
+                        margin-top: 16px;
+
+                        span {
+                            float: left;
+                        }
+                        textarea {
+                            width: 515px;
+                            height: 68px;
+                            border: 1px solid #e3e3e3;
+                            resize: none;
+                            padding-top: 8px;
+                            padding-left: 8px;
+                            outline: none;
+                        }
+                    }
+                    .receive-person {
+                        width: 610px;
+                        margin-top: 16px;
+
+                        span {
+                            float: left;
+                            margin-left: 14px;
+
+                            &:last-of-type {
+                                margin-left: 45px;
+                            }
+                        }
+                        input {
+                            float: left;
+                            border: 1px solid #e3e3e3;
+                            width: 200px;
+                            height: 30px;
+                        }
+                    }
+                }
+
+                .right {
+                    float: left;
+                    height: 90px;
+                    width: 300px;
+                    margin-top: 50px;
+                    margin-left: 60px;
+
+                    .default {
+                        width: 100%;
+                        height: 22px;
+                        line-height: 22px;
+                        font-size: 12px;
+                        margin-bottom: 24px;
+
+                        input {
+                            width: 16px;
+                            height: 16px;
+                            float: left;
+                            margin-right: 10px;
+                        }
+                        span {
+                            font-weight: normal;
+                        }
+                    }
+                    .btns {
+                        button {
+                            width: 145px;
+                            height: 43px;
+                            border-radius: 3px;
+
+                            &:first-child {
+                                background: $bd;
+                                border: 0;
+                                color: #fff;
+                                outline: none;
+                                margin-right: 5px;
+
+                                &:hover {
+                                    background: #c4b596;
+                                }
+                            }
+                            &:last-child {
+                                background: #f5f3ef;
+                                border: 1px solid #c4b596;
+                                color: $bd;
+                                outline: none;
+
+                                &:hover {
+                                    background: #fff;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    // 商品信息
+    .product-info {
+        width: 100%;
+        margin-top: 36px;
+
+        .pro-list {
+            width: 1090px;
+            border: 1px solid #e8e8e8;
+            
+            .list-header {
+                width: 100%;
+                height: 42px;
+                background: #f5f5f5;
+                line-height: 42px;
+                padding: 0 25px;
+                font-size: 14px;
+                color: #999;
+
+                span {
+                    &:first-child {
+                        margin-right: 370px;
+                    }
+                    &:nth-child(2) {
+                        margin-right: 130px;
+                    }
+                    &:nth-child(3) {
+                        margin-right: 145px;
+                    }
+                    &:nth-child(4) {
+                        margin-right: 150px;
+                    }
+                }
+            }
+
+            // 商品详情
+            .list-content {
+                width: 100%;
+
+                .single-product {
+                    width: 1050px;
+                    height: 140px;
+                    margin: 0 auto;
+                    padding: 20px 0;
+                    border-bottom: 1px dashed #dedede;
+
+                    &:last-child {
+                        border-bottom: 0;
+                    }
+
+                    img {
+                        float: left;
+                        width: 100px;
+                        height: 100px;
+                        background: gold;
+                    }
+                    .title {
+                        float: left;
+                        width: 260px;
+                        margin-top: 5px;
+                        margin-left: 5px;
+                    }
+                    .price {
+                        float: left;
+                        width: 130px;
+                        text-align: center;
+                        margin-left: 15px;
+                        margin-top: 5px;
+                    }
+                    .number {
+                        @extend .price;
+                        margin-left: 37px;
+                    }
+                    .subtotal {
+                        @extend .price;
+                        margin-left: 45px;
+                    }
+                    .net {
+                        @extend .price;
+                        margin-left: 55px;
+                    }
+                }
+            }
+
+            .list-footer {
+                width: 100%;
+                height: 325px;
+                border-top: 1px solid #e8e8e8;
+                background: #f5f5f5;
+
+                .invoice {
+                    width: 100%;
+                    height: 80px;
+                    padding-left: 50px;
+                    border-bottom: 1px solid #e8e8e8;
+
+                    p {
+                        margin-top: 20px;
+                        font-size: 14px;
+                        color: #999999;
+                    }
+                    label {
+                        input {
+                            float: left;
+                            width: 16px;
+                            height: 16px;
+                            margin-right: 8px;
+                            outline: none;
+                        }
+                        span {
+                            float: left;
+                            margin-top: 3px;
+                            font-size: 14px;
+                            color: #333333;
+                            font-weight: normal;
+                        }
+                    }
+                }
+
+                .pay {
+                    padding-left: 50px;
+                    padding-right: 40px;
+                    height: 225px;
+
+                    .left {
+                        float: left;
+                        width: 405px;
+
+                        .ticket {
+                            @extend .invoice;
+                            padding-left: 0;
+                            height: 80px;
+                            border-bottom: 1px dashed #e8e8e8;
+
+                            p {
+                                i {
+                                    margin-left: 8px;
+                                }
+                            }
+                            select {
+                                color: #6699cc;
+                                border: none;
+                                outline: none;
+                            }
+                        }
+                        .card {
+                            @extend .ticket;
+                            border-bottom: 0;
+
+                            label {
+                                display: block;
+                                width: 100%;
+                                height: 20px;
+
+                                span {
+                                    color: #999999;
+                                }
+                            }
+                            select {
+                                margin-top: 12px;
+                            }
+                        }
+                    }
+
+                    .right {
+                        float: right;
+                        width: 240px;
+                        font-size: 14px;
+                        color: #333333;
+
+                        p {
+                            span {
+                                float: right;
+
+                                b {
+                                    font-weight: normal;
+                                }
+                            }
+                            &:first-child {
+                                margin-top: 18px;
+                            }
+                            &:nth-child(2) {
+                                padding-left: 28px;
+                            }
+                            &:nth-child(3) {
+                                padding-left: 42px;
+                                margin-top: 30px;
+
+                                span {
+                                    color: #d4282d;
+                                    font-size: 18px;
+                                    font-weight: bolder;
+                                    line-height: 20px;
+
+                                    b {
+                                        font-weight: bolder;
+                                    }
+                                }
+                            }
+                        }
+                        button {
+                            float: right;
+                            margin-top: 18px;
+                            width: 168px;
+                            height: 50px;
+                            border-radius: 3px;
+                            background: $bd;
+                            color: #fff;
+                            font-size: 16px;
+                            border: 0;
+                            outline: none;
+
+                            &:hover {
+                                background: #c4b596;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .agree {
+            width: 100%;
+            height: 95px;
+
+            label {
+                float: right;
+                width: 170px;
+                height: 20px;
+                margin-top: 12px;
+
+                input {
+                    float: left;
+                    width: 16px;
+                    height: 16px;
+                }
+                span {
+                    float: right;
+                    font-weight: normal;
+                    font-size: 12px;
+                    margin-top: 3px;
+                    color: #6699d5;
+                }
+            }
+        }
+    }
+}

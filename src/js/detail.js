@@ -1,5 +1,5 @@
 require(["config"], function() {
-    require(["jquery", "load", "cookie"], function($) {
+    require(["jquery", "load", "cookie", "zoom"], function($) {
         function Detail() {
             this.render();
             this.addListener();
@@ -11,24 +11,39 @@ require(["config"], function() {
         $.extend(Detail.prototype, {
             //渲染商品详情
             render() {
-                const querystring = location.search.slice(1).split("&");    //获取查询字符串
-                let 
-                    arr = querystring,
-                    detail = {};
-                $.each(arr, function(index, curr){
-                    let 
-                        a = curr.slice(0, curr.indexOf("=")),
-                        b = decodeURIComponent(curr.slice(curr.indexOf("=") + 1));
-                    detail[a] = b;
-                });
-                // console.log(detail)
+                const _id = location.search.slice(location.search.lastIndexOf("=")+1);    //获取查询字符串
 
-                $("div.big-img img").attr({src: detail.img + "&text=" + detail.text});  //大图
-                $("div.small-img a img").attr({src: detail.img + "&text=" + detail.text});  //小图
-                $("div.m-d-r-detail .m-d-r-d-id").text(detail.id);  //商品id
-                $("div.m-d-right h4 b").text(detail.title);    //商品名
-                $("div.m-d-right p span").text(detail.desc);  //商品描述
-                $("div.m-d-r-detail .m-d-r-d-price b").text(detail.price);  //商品价格
+                $.getJSON("http://rap2api.taobao.org/app/mock/120044/api/brand/list", (data)=>{
+                    const currPro = data.res_body.list[_id-1];
+                    
+                    $("div.m-d-r-detail .m-d-r-d-id").text(currPro.id);  //商品id
+                    $("div.m-d-right h4 b").text(currPro.title);    //商品名
+                    $("div.m-d-right p span").text(currPro.desc);  //商品描述
+                    $("div.m-d-r-detail .m-d-r-d-price b").text(currPro.price);  //商品价格
+                    $("div.m-header em").text(currPro.title);
+
+                    //放大镜
+                    $(".zoom-img").attr({src: currPro.imgs[0].middleImg, "data-zoom-image": currPro.imgs[0].bigImg});  //中图
+
+                    $.each(currPro.imgs, (index, curr)=>{
+                        $("div.small-img a").eq(index).attr({"data-image": curr.middleImg, "data-zoom-image": curr.bigImg});
+                        $("img", $("div.small-img a").eq(index)).attr({src: curr.smallImg});  //小图
+                    });
+                    $(".zoom-img").elevateZoom({
+						gallery:'gal1',
+						cursor: 'pointer',
+						galleryActiveClass: 'active'
+                    }); 
+                    
+                    //给小图绑定滑入事件
+                    $(".small-img a").hover((event)=>{
+                        const src = $(event.target).parent("a");
+                        // console.log(src)
+                        const index = $(".small-img a").index(src);
+                        // console.log(index)
+                        $(".zoom-img").attr({src: currPro.imgs[index].middleImg, "data-zoom-image": currPro.imgs[index].bigImg});  //中图
+                    },()=>{});
+                });
             },
 
             //监听加入购物车

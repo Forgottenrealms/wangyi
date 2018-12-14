@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Lookz Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<title>登录注册</title>
+	<link rel="stylesheet" href="/css/loginAndRegister.css">
+	<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" href="css/header.css"> -->
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/footer.css">
+	<script src="/lib/requirejs/require.min.js" data-main="/js/loginAndRegister"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<header></header>
+	<!-- 主体 -->
+	<div class="main">
+		<div class="wrap">
+			<!-- 登录 -->
+			<div class="login-box hidden">
+				<div class="top">
+					<div class="phone"><a href="#">手机号登录</a></div>
+					<div class="email"><a href="#">邮箱登录</a></div>
+				</div>
+				<div class="login">
+					<div class="alert alert-danger hidden login-error">用户名或密码错误</div>
+					<form id="login-form">
+						<div class="user-email">
+							<i class="glyphicon glyphicon-user"></i>
+							<input type="text" placeholder="邮箱账号" name="email">
+						</div>
+						<div class="password">
+							<i class="glyphicon glyphicon-lock"></i>
+							<input type="password" placeholder="请输入密码" name="password">
+						</div>
+						<input type="submit" value="登录" id="btn-login">
+					</form>
+				</div>
+				<div class="bottom">
+					<div class="links">
+						<a href="javascript:void(0)" class="email-regis">邮箱注册</a>
+						<a href="#">忘记密码？</a>
+					</div>
+				</div>
+			</div>
+
+			<!-- 注册 -->
+			<div class="register-box">
+				<div class="top">
+					<div class="email-register"><a href="#">邮箱注册</a></div>
+					<div class="login">
+						<a href="javascript:void(0)">手机号注册</a>
+						<a href="javascript:void(0)" class="login-now">直接登录</a>
+					</div>
+				</div>
+				<div class="register">
+					<div class="alert alert-danger hidden register-error">用户注册失败</div>
+					<form id="register-form">
+						<div class="user-email">
+							<i class="glyphicon glyphicon-user"></i>
+							<input type="text" placeholder="邮箱账号" name="email">
+						</div>
+						<div class="password">
+							<i class="glyphicon glyphicon-lock"></i>
+							<input type="password" placeholder="请输入密码" name="password">
+						</div>
+						<input type="submit" value="注册" id="btn-register">
+						<label><input type="checkbox" checked="checked">我同意《服务条款》和《网易隐私政策》</label>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- 尾部 -->
+	<footer></footer>
+</body>
+</html>

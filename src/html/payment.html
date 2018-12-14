@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Lookz Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+	<title>商品详情</title>
+	<link rel="stylesheet" href="/css/payment.css">
+	<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/header.css">
+	<link rel="stylesheet" href="/css/footer.css">
+	<script src="/lib/requirejs/require.min.js" data-main="/js/payment"></script>
+</head>
+<body>
+	<!-- 头部 -->
+	<header></header>
+	<!-- 主体 -->
+	<div class="main">
+        <!-- 收货信息 -->
+		<div class="receive-info">
+            <div class="receive-header">收货信息</div>
+            <div class="information">
+                <div class="wrap">
+                    <div class="left">
+                        <div class="area">
+                            <span>所在地区：</span>
+                            <select name="province" id="province">
+                                <option value="-1">请选择</option>
+                            </select>
+                            <select name="city" id="city">
+                                <option value="-1">请选择</option>
+                            </select>
+                            <select name="county" id="county">
+                                <option value="-1">请选择</option>
+                            </select>
+                        </div>
+                        <div class="address">
+                            <span>详细地址：</span>
+                            <textarea name="input-address" id="input-address" placeholder="详细地址，街道、门牌号等"></textarea>
+                        </div>
+                        <div class="receive-person">
+                            <span>收货人：</span>
+                            <input type="text">
+                            <span>手机号码：</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="default">
+                            <label><input type="checkbox"><span>设为默认</span></label> 
+                        </div>
+                        <div class="btns">
+                            <button id="save-address">保存地址</button>
+                            <button id="cancel-address">取消</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 商品信息 -->
+        <div class="product-info">
+            <!-- 商品列表 -->
+            <div class="pro-list">
+                <div class="list-header">
+                    <span>商品信息</span>
+                    <span>单价</span>
+                    <span>数量</span>
+                    <span>小计</span>
+                    <span>实付</span>
+                </div>
+
+                <!-- 商品详情 -->
+                <div class="list-content">
+                    <!-- <div class="single-product">
+                        <img src="">
+                        <div class="title"><span>国窖1573国韵53°1000毫升</span></div>
+                        <div class="price">￥<span>3580.00</span></div>
+                        <div class="number"><span>2</span></div>
+                        <div class="subtotal">￥<span>7160.00</span></div>
+                        <div class="net">￥<span>7160.00</span></div>
+                    </div>
+                    <div class="single-product">
+                        <img src="">
+                        <div class="title"><span>国窖1573国韵53°1000毫升</span></div>
+                        <div class="price">￥<span>3580.00</span></div>
+                        <div class="number"><span>2</span></div>
+                        <div class="subtotal">￥<span>7160.00</span></div>
+                        <div class="net">￥<span>7160.00</span></div>
+                    </div> -->
+                </div>
+
+                <div class="list-footer">
+                    <div class="invoice">
+                        <p>发票信息：<i class="glyphicon glyphicon-question-sign"></i></p>
+                        <label><input type="checkbox"><span>我要开发票</span></label>
+                    </div>
+                    <div class="pay">
+                        <div class="left">
+                            <div class="ticket">
+                                <p>使用优惠券(0张)<i class="glyphicon glyphicon-question-sign"></i></p>
+                                <select name="" id=""><option>兑换优惠券</option></select>
+                            </div>
+                            <div class="card">
+                                <p>使用礼品卡<i class="glyphicon glyphicon-question-sign"></i></p>
+                                <label><input type="checkbox"><span>可用余额0.00</span></label>
+                                <select name="" id=""><option>添加礼品卡</option></select>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <p>商品合计&nbsp;：<span>￥<b>7259.00</b></span></p>
+                            <p>运费&nbsp;：<span>￥<b>0.00</b></span></p>
+                            <p>应付总额&nbsp;：<span>￥<b>7259.00</b></span></p>
+                            <button>去付款</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 同意协议 -->
+            <div class="agree">
+                <label><input type="checkbox" checked="checked"><span>同意《网易严选服务协议》</span></label> 
+            </div>
+        </div>   
+	</div>
+	<!-- 尾部 -->
+    <footer></footer>
+    
+    <script type="text/html" id="payment-template">
+        {{each payPro product}}
+            <div class="single-product">
+                <img src="{{product.img}}">
+                <div class="title"><span>{{product.title}}</span></div>
+                <div class="price">￥<span>{{product.price}}</span></div>
+                <div class="number"><span>{{product.number}}</span></div>
+                <div class="subtotal">￥<span>{{product.subtotal}}</span></div>
+                <div class="net">￥<span>{{product.subtotal}}</span></div>
+            </div>
+        {{/each}}
+    </script>
+</body>
+</html>

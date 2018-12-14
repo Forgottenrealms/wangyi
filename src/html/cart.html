@@ -24,7 +24,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 		</div>
 		<div class="m-cart">
 			<div class="check-all">
-				<input type="checkbox" class="check">
+				<input type="checkbox" class="check checked-all">
 				<span>全选</span>
 				<b>商品信息</b>
 				<i>单价</i>
@@ -43,16 +43,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<!-- 下单 -->
 			<div class="pay">
-				<input type="checkbox" class="check">
-				<div class="pay-check">已选&nbsp;&nbsp;(<span>1</span>)</div>
+				<input type="checkbox" class="check checked-some">
+				<div class="pay-check">已选&nbsp;&nbsp;(<span>0</span>)</div>
 				<div class="pay-delete"><a href="#">批量删除</a></div>
 				<div class="pay-empty"><a href="#">清空失效商品</a></div>
 				<div class="pay-clac">
-					<p>商品合计：<b>￥<span>1088.00</span></b></p>
+					<p>商品合计：<b>￥<span>0.00</span></b></p>
 					<p>活动优惠：<b>-￥<span>00.00</span></b></p>
 				</div>
 				<div class="pay-count">
-					<p>应付总额<b>￥<span>1088.00</span></b></p>
+					<p>应付总额<b>￥<span>0.00</span></b></p>
 					<a href="#">已满足包邮条件></a>
 				</div>
 				<button class="pay-alipay">下单</button>
@@ -65,9 +65,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 	<script type="text/html" id="cart-template">
 		{{each cart product}}
 			<div class="single-product">
+				<div class="product-id" style="display:none;">{{product.id}}</div>
 				<!-- 选择框 -->
 				<div class="choice-box">
-					<input type="checkbox">
+					<input type="checkbox" class="checked-part">
 				</div>
 				<!-- 商品图片 -->
 				<div class="product-img">
@@ -86,9 +87,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!-- 数量 -->
 				<div class="product-number">
-					<span>-</span>
+					<span class="less">-</span>
 					<input type="text" value="{{product.amount}}">
-					<span>+</span>
+					<span class="more">+</span>
 				</div>
 				<!-- 小计 -->
 				<div class="product-calc">
@@ -96,8 +97,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</div>
 				<!-- 操作 -->
 				<div class="product-oprate">
-					<a href="#">移入收藏夹</a>
-					<a href="#">删除</a>
+					<a href="javascript:void(0)">移入收藏夹</a>
+					<a href="javascript:void(0)" class="remove-pro">删除</a>
 				</div>
 			</div>
 		{{/each}}

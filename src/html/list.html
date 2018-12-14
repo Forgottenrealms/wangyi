@@ -39,16 +39,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<!-- 商品列表 -->
 			<div class="m-list">
-				<!-- 列表中的商品 -->
-				<!-- <div class="m-l-product">
-					<div class="m-l-p-up">
-						<a href="#"><img src="" alt=""></a>	
-					</div>
-					<div class="title"><a href="#">男士简洁时尚正装鞋</a></div>
-					<div class="price">￥359</div>
-					<span></span>
-					<div class="desc">牛皮+简洁设计，利落姿态应对世界</div>
-				</div> -->
+				
 			</div>
 		</div>
 	</div>
@@ -61,9 +52,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			<div class="m-l-product">
 				<div style="display: none;" class="id">{{products.id}}</div>
 				<div class="m-l-p-up">
-					<a href="/html/html/detail.html?img={{products.img}}&id={{products.id}}&title={{products.title}}&price={{products.price}}&desc={{products.desc}}"><img src="{{products.img}}"/></a>	
+					<a href="/html/html/detail.html?id={{products.id}}"><img src="{{products.imgs[0].normalImg}}"/></a>	
 				</div>
-				<div class="title"><a href="/html/html/detail.html">{{products.title}}</a></div>
+				<div class="title"><a href="/html/html/detail.html?id={{products.id}}">{{products.title}}</a></div>
 				<div class="price">￥{{products.price}}</div>
 				<span></span>
 				<div class="desc">{{products.desc}}</div>
